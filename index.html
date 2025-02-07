@@ -6,49 +6,47 @@
     <meta name="description" content="Music Production Portfolio - Showcasing music works, edits, and projects">
     <meta name="keywords" content="music production, beats, edits, portfolio">
     <title>My Music Portfolio</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin: 0;
-            padding: 0;
-            background: #111;
-            color: white;
-        }
-        header {
-            background: #222;
-            padding: 20px;
-            font-size: 24px;
-        }
-        section {
-            margin: 40px;
-        }
-        .video-container {
-            margin-top: 20px;
-        }
-        footer {
-            background: #222;
-            padding: 10px;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css"> <!-- Link to external CSS file -->
 </head>
 <body>
     <header>
         <h1>Welcome to My Music Portfolio</h1>
     </header>
-    
+
     <section>
-        <h2>Featured Work</h2>
-        <p>Videos and projects will be added soon.</p>
-        <div class="video-container">
-            <!-- Example YouTube Embed (Replace LINK with actual video link) -->
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/LINK" frameborder="0" allowfullscreen></iframe>
+        <div class="search-container">
+            <input type="text" id="searchBar" placeholder="Search videos by title..." oninput="searchVideos()">
+            <button onclick="searchVideos()">Search</button>
+        </div>
+    </section>
+
+    <section>
+        <h2 class="category-title">Compositions</h2>
+        <div class="video-container" id="compositions">
+            <!-- Replace with actual YouTube links -->
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/LINK1" frameborder="0" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/LINK2" frameborder="0" allowfullscreen></iframe>
         </div>
     </section>
     
+    <section>
+        <h2 class="category-title">Covers</h2>
+        <div class="video-container" id="covers">
+            <!-- Replace with actual YouTube links -->
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/LINK3" frameborder="0" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/LINK4" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </section>
+    
+    <section>
+        <h2 class="category-title">Other Contents</h2>
+        <div class="video-container" id="otherContents">
+            <!-- Replace with actual YouTube links -->
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/LINK5" frameborder="0" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/LINK6" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </section>
+
     <section>
         <h2>About Me</h2>
         <p>Music producer passionate about beats, edits, and creativity. More info coming soon.</p>
@@ -62,5 +60,7 @@
     <footer>
         &copy; 2025 My Music Portfolio
     </footer>
+
+    <script src="script.js"></script> <!-- Link to external JavaScript file -->
 </body>
 </html>
