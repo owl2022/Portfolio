@@ -1,3 +1,4 @@
+/* Basic styling */
 body {
     font-family: Arial, sans-serif;
     text-align: center;
@@ -6,44 +7,32 @@ body {
     background: #111;
     color: white;
 }
+
+/* Header */
 header {
     background: #222;
     padding: 20px;
     font-size: 24px;
 }
-section {
-    margin: 40px;
-}
-.video-container {
-    margin-top: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-.video-container iframe {
-    margin: 10px;
-}
-.category-title {
-    font-size: 20px;
-    margin-top: 30px;
-    color: #ddd;
-}
-footer {
-    background: #222;
-    padding: 10px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
+
+/* Search bar in the top right */
 .search-container {
-    margin: 20px;
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    width: 250px; /* Adjust the width of the search bar */
 }
+
 input[type="text"] {
     padding: 10px;
     font-size: 16px;
-    width: 80%;
-    max-width: 400px;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #444;
+    background-color: #333;
+    color: white;
 }
+
 button {
     padding: 10px 15px;
     font-size: 16px;
@@ -52,6 +41,42 @@ button {
     color: white;
     cursor: pointer;
 }
+
 button:hover {
     background-color: #666;
+}
+
+/* Section styling */
+section {
+    margin: 40px;
+}
+
+/* Category Titles */
+.category-title {
+    font-size: 20px;
+    margin-top: 30px;
+    color: #ddd;
+}
+
+/* Video Containers: 3-column layout */
+.video-container {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Create 3 equal columns */
+    gap: 20px; /* Space between the columns */
+    justify-items: center;
+}
+
+.video-container iframe {
+    width: 100%; /* Ensure videos are responsive */
+    height: 315px;
+}
+
+/* Footer */
+footer {
+    background: #222;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
